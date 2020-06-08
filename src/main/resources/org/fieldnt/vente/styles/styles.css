@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1 mars 2020, 14:28:23
+    Author     : NGEREZA
+*/
+
+
+
+.button{
+    -fx-background-color : deepskyblue;
+    -fx-text-fill:#ffffff;
+}
+
+.button:hover{
+    -fx-background-color : #3366ff;
+}
+
+.button:pressed{
+    -fx-background-color : black;
+}
+
+.panneau{
+    -fx-background-radius: 0.6em;
+    -fx-background-color: white;
+}
+
+
+.titre{
+    -fx-background-color: deepskyblue;
+    -fx-background-radius: 0.2em 0.2em 0 0;
+    -fx-text-fill:white;
+}
+
+
+
+.ligne{
+    -fx-border-color:darkslateblue;
+}
+.ligne .label{
+    -fx-text-fill:black;
+}
+
+.pane{
+    -fx-border-color:deepskyblue;
+}

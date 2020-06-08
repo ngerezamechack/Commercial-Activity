@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="289.0" prefWidth="554.0" style="-fx-background-color: skyblue;" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   
+    <center>
+        <AnchorPane prefHeight="170.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="35.0" layoutY="134.0" prefHeight="56.0" prefWidth="484.0" text="COMMERCIAL ACTIVITY " textAlignment="CENTER" textFill="#fcfcfc">
+               <font>
+                  <Font name="Arial Bold" size="40.0" />
+               </font></Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/comac.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="247.0" layoutY="178.0" text="Version 1.0" textFill="#f8f6f6" />
+         </children>
+        </AnchorPane>
+    </center>
+   <bottom>
+      <FlowPane alignment="CENTER" prefHeight="67.0" prefWidth="554.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="55.0" fitWidth="85.0" onMouseClicked="#ouvrir" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/field.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </FlowPane>
+   </bottom>
+</fx:root>

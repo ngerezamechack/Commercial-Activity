@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="facture" language="groovy" pageWidth="283" pageHeight="425" columnWidth="243" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="2c29e5c5-89c4-4960-ab45-2dfc2ab9326b">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM etablissement,activity,detail,produit
+WHERE activity.num_a = -21204596
+AND detail.num_a = activity.num_a
+AND produit.id_p = detail.id_p]]>
+	</queryString>
+	<field name="id_et" class="java.lang.Object"/>
+	<field name="nom_et" class="java.lang.Object"/>
+	<field name="num_a" class="java.lang.Object"/>
+	<field name="date_a" class="java.util.Date"/>
+	<field name="client_a" class="java.lang.Object"/>
+	<field name="total_a" class="java.lang.Object"/>
+	<field name="id_pr" class="java.lang.Object"/>
+	<field name="id_d" class="java.lang.Object"/>
+	<field name="pu_d" class="java.lang.Object"/>
+	<field name="qte_d" class="java.lang.Object"/>
+	<field name="total_d" class="java.lang.Object"/>
+	<field name="id_p" class="java.lang.Object"/>
+	<field name="nom_p" class="java.lang.Object"/>
+	<field name="pu_p" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="68" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="243" height="20" uuid="91c737da-969e-463d-825c-f42b629ffe85"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[""+$F{nom_et}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="58" y="44" width="100" height="20" uuid="c956e0f6-c8c7-4d32-9b38-7ec0642524b6"/>
+				<textFieldExpression><![CDATA[": "+$F{client_a}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="20" width="100" height="20" uuid="f1e48a20-c1ce-4a34-8fb6-590a351fefee"/>
+				<textFieldExpression><![CDATA[""+$F{date_a}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="44" width="58" height="20" uuid="d9c56185-fca4-45ba-8c23-24d753a37d23"/>
+				<text><![CDATA[CLIENT]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="64" width="243" height="1" uuid="b34a00a6-459c-4a67-9ca3-32826b4d9778"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="110" height="20" uuid="3baf6c55-cc05-44ef-afe3-e6371a7dd4f8"/>
+				<text><![CDATA[PRODUIT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="0" width="36" height="20" uuid="aad8fbed-1abc-4b3c-ad34-224d0f521937"/>
+				<text><![CDATA[QTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="0" width="53" height="20" uuid="8c4b3147-7c50-4a29-a59f-50742ec8a247"/>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="44" height="20" uuid="bac9849b-0070-42c0-99cd-f9b38457caf4"/>
+				<text><![CDATA[PRIX]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="110" height="20" uuid="b3a9b5fd-0c51-45af-9d92-f3ec819eda03"/>
+				<textFieldExpression><![CDATA[""+$F{nom_p}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="1" width="36" height="20" uuid="f2fe8afb-2e60-4c36-ab68-59bebca0c5fb"/>
+				<textFieldExpression><![CDATA[""+$F{qte_d}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="1" width="53" height="20" uuid="b5d04d12-3912-4309-83f7-b1bcecd71dea"/>
+				<textFieldExpression><![CDATA[""+$F{total_d}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="1" width="44" height="20" uuid="e3da5bf0-e639-461e-a11b-4d08dadf2d30"/>
+				<textFieldExpression><![CDATA[""+$F{pu_d}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="243" height="20" uuid="08e0f77c-b48c-4b25-aa0b-baa55ec6b2ea"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Net à payer :"+$F{total_a}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

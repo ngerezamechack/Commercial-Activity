@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root id="AnchorPane" prefHeight="38.0" prefWidth="37.0" style="-fx-border-radius: 0.5em 0.5em 0.5em 0.5em; -fx-border-color: skyblue;" type="BorderPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <ProgressIndicator fx:id="pg" BorderPane.alignment="CENTER" />
+   </center>
+</fx:root>
