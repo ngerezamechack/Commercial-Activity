@@ -20,4 +20,31 @@ public class Etablissement {
         this.id = id;
         this.nom = nom;
     }
+    
+    public void setId(int id){
+        this.id = id;
+    }
+    public int getId(){
+        return id;
+    }
+    
+    public void setNom(String nom){
+        this.nom = nom;
+    }
+    public String getNom(){
+        return nom;
+    }
+    
+    @Override
+    public String toString(){
+        return nom;
+    }
+    
+    @Override
+    public boolean equals(Object o){
+        if(o instanceof Etablissement){
+            return this.id == ((Etablissement) o).id;
+        }
+        return false;
+    }
 }
