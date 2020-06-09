@@ -93,7 +93,7 @@
                     
                     <archive>
                         <manifest>
-                            <mainClass>org.fieldnt.vente.vues.Main</mainClass>
+                            <mainClass>vente.vues.Main</mainClass>
                         </manifest>
                     </archive>
                     <appendAssemblyId>false</appendAssemblyId>

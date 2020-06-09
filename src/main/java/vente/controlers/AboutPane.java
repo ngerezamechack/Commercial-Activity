@@ -25,7 +25,7 @@ public class AboutPane extends BorderPane{
     
     //constructeur pardefaut
     public AboutPane() {
-        FXMLLoader load = new FXMLLoader(getClass().getResource("/org/fieldnt/vente/vues/about.fxml"));
+        FXMLLoader load = new FXMLLoader(getClass().getResource("/vente/vues/about.fxml"));
         load.setRoot(this);
         load.setController(this);
         

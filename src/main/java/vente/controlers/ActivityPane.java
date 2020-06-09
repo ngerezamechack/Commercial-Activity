@@ -67,13 +67,13 @@ public class ActivityPane extends BorderPane {
     private DActivity dac = new DActivity();
 
     public ActivityPane() {
-        FXMLLoader load = new FXMLLoader(getClass().getResource("/org/fieldnt/vente/vues/activity.fxml"));
+        FXMLLoader load = new FXMLLoader(getClass().getResource("/vente/vues/activity.fxml"));
         load.setRoot(this);
         load.setController(this);
 
         try {
             load.load();
-            getStylesheets().add(getClass().getResource("/org/fieldnt/vente/styles/styles.css").toExternalForm());
+            getStylesheets().add(getClass().getResource("/vente/styles/styles.css").toExternalForm());
             
              
             produitpane = new ProduitPane(tlistproduit, tpu, tqte, ttotal, tchproduit);

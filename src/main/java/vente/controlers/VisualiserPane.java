@@ -23,7 +23,7 @@ public class VisualiserPane extends BorderPane{
     
     
     public VisualiserPane() {
-        FXMLLoader load = new FXMLLoader(getClass().getResource("/org/fieldnt/vente/vues/visualiser.fxml"));
+        FXMLLoader load = new FXMLLoader(getClass().getResource("/vente/vues/visualiser.fxml"));
         load.setRoot(this);
         load.setController(this);
         

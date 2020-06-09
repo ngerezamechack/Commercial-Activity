@@ -196,7 +196,7 @@ public class DActivity extends DAO<Activity> {
                 rs = prepare(sql, o.getNumero()).executeQuery();
                 print(
                         new JRResultSetDataSource(rs),
-                        getClass().getResource("/org/fieldnt/vente/rapports/facture.jrxml/")
+                        getClass().getResource("/vente/rapports/facture.jrxml")
                 );
             } catch (Exception ex) {
                 Boite.showException(ex, "facture");
@@ -215,7 +215,7 @@ public class DActivity extends DAO<Activity> {
                 rs = prepare(sql, Date.valueOf(o.getDate())).executeQuery();
                 print(
                         new JRResultSetDataSource(rs),
-                        getClass().getResource("/org/fieldnt/vente/rapports/jour.jrxml/")
+                        getClass().getResource("/vente/rapports/jour.jrxml")
                 );
             } catch (Exception ex) {
                 Boite.showException(ex, "rapport jour");
@@ -226,16 +226,16 @@ public class DActivity extends DAO<Activity> {
     //IMPRESSION DU RAPPORT PERIODIQUE
     public void rapportPeriode(Activity o) {
         if (Boite.showConfirmation("Afficher le rapport?", "Attention..")) {
-            sql = "SELECT *\n"
-                    + "FROM etablissement,periode,activity\n"
+            sql = "SELECT * \n"
+                    + "FROM etablissement,periode,activity \n"
                     + "WHERE periode.id_pr = ? \n"
-                    + "AND activity.id_pr = periode.id_pr\n"
+                    + "AND activity.id_pr = periode.id_pr \n"
                     + "ORDER BY date_a DESC";
             try {
                 rs = prepare(sql, o.getPeriode().getId()).executeQuery();
                 print(
                         new JRResultSetDataSource(rs),
-                        getClass().getResource("/org/fieldnt/vente/rapports/periode.jrxml/")
+                        getClass().getResource("/vente/rapports/periode.jrxml")
                 );
             } catch (Exception ex) {
                 Boite.showException(ex, "rapport periode");

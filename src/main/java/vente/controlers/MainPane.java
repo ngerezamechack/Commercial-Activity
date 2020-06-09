@@ -20,7 +20,7 @@ public class MainPane extends BorderPane{
     private AboutPane aboutpane = new AboutPane();
     
     public MainPane(){
-        FXMLLoader load = new FXMLLoader(getClass().getResource("/org/fieldnt/vente/vues/main.fxml"));
+        FXMLLoader load = new FXMLLoader(getClass().getResource("/vente/vues/main.fxml"));
         load.setRoot(this);
         load.setController(this);
         

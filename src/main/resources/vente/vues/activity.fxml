@@ -31,9 +31,9 @@
       <AnchorPane prefHeight="383.0" prefWidth="312.0" BorderPane.alignment="CENTER">
          <children>
             <ListView fx:id="tlistproduit" layoutX="18.0" layoutY="43.0" prefHeight="189.0" prefWidth="282.0" />
-            <TextField fx:id="tpu" editable="false" layoutX="18.0" layoutY="257.0" />
-            <TextField fx:id="tqte" layoutX="18.0" layoutY="301.0" />
-            <TextField fx:id="ttotal" editable="false" layoutX="18.0" layoutY="350.0" />
+            <TextField fx:id="tpu" editable="false" layoutX="18.0" layoutY="257.0" promptText="Prix Unitaire" />
+            <TextField fx:id="tqte" layoutX="18.0" layoutY="301.0" promptText="Quantité" />
+            <TextField fx:id="ttotal" editable="false" layoutX="18.0" layoutY="350.0" promptText="Total" />
             <TextField fx:id="tchproduit" layoutX="90.0" layoutY="10.0" prefHeight="25.0" prefWidth="208.0" promptText="Produit" />
             <Label layoutX="18.0" layoutY="240.0" text="Prix unitaire" />
             <Label layoutX="18.0" layoutY="285.0" text="Quantité" />
@@ -69,7 +69,7 @@
          <children>
             <Button mnemonicParsing="false" onAction="#statjour" prefHeight="25.0" prefWidth="130.0" text="Statistiques" />
             <Button mnemonicParsing="false" onAction="#rapportJour" prefHeight="25.0" prefWidth="130.0" text="Rapport journalier" />
-            <Button mnemonicParsing="false" onAction="#rapportPeriode" prefHeight="25.0" prefWidth="130.0" text="Rapport Période" />
+            <Button mnemonicParsing="false" onAction="#rapportPeriode" prefHeight="25.0" prefWidth="130.0" text="Rapport Périodique" />
             <Button mnemonicParsing="false" onAction="#openPeriode" prefHeight="25.0" prefWidth="130.0" text="Période" />
             <Button mnemonicParsing="false" onAction="#vidertout" prefHeight="25.0" prefWidth="130.0" text="Actualiser" />
          </children>

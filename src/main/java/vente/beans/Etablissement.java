@@ -13,6 +13,16 @@ public class Etablissement {
     private int id;
     private String nom;
 
+    public Etablissement() {
+    }
+
+    public Etablissement(int id, String nom) {
+        this.id = id;
+        this.nom = nom;
+    }
+
+    
+    
     /**
      * @return the id
      */

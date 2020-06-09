@@ -8,6 +8,7 @@ package vente.vues;
 import javafx.application.Application;
 import javafx.application.HostServices;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import vente.beans.Boite;
 import vente.controlers.EtablissementPane;
@@ -28,6 +29,10 @@ public class Main extends Application {
         hser = getHostServices();
         
         st.setScene(new Scene(mp));
+        st.getIcons().add(new Image(getClass().getResourceAsStream("/vente/images/comac.png")));
+        
+        st.setResizable(false);
+        st.setMaximized(true);
         st.setOnCloseRequest((e)->{
             if(Boite.showConfirmation("Quitter?", "Attention..")){
                 System.exit(0);
@@ -44,7 +49,7 @@ public class Main extends Application {
         
     }
 
-    public static void openrul(String url){
+    public static void openurl(String url){
         hser.showDocument(url);
     }
     

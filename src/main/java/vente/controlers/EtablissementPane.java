@@ -15,7 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import vente.beans.Boite;
-import org.fieldnt.vente.beans.Etablissement;
+import vente.beans.Etablissement;
 import vente.controlers.event.CEvent;
 import vente.donnees.DEtablissement;
 
@@ -37,13 +37,13 @@ public class EtablissementPane extends AnchorPane{
     private Stage st = new Stage(StageStyle.UTILITY);
     
     public EtablissementPane() {
-        FXMLLoader load = new FXMLLoader(getClass().getResource("/org/fieldnt/vente/vues/etablissement.fxml"));
+        FXMLLoader load = new FXMLLoader(getClass().getResource("/vente/vues/etablissement.fxml"));
         load.setRoot(this);
         load.setController(this);
         
         try{
             load.load();
-            getStylesheets().add(getClass().getResource("/org/fieldnt/vente/styles/styles.css").toExternalForm());
+            getStylesheets().add(getClass().getResource("/vente/styles/styles.css").toExternalForm());
             initVues();
             
             st.setScene(new Scene(this));

@@ -25,6 +25,6 @@
       <Label layoutX="55.0" layoutY="178.0" text="Prix Unitaire" />
       <Label layoutX="271.0" layoutY="50.0" text="Recherche" />
       <TextField fx:id="tpu" layoutX="55.0" layoutY="200.0" prefHeight="25.0" prefWidth="196.0" promptText="Prix Unitaire" />
-      <TextField fx:id="tch" layoutX="345.0" layoutY="46.0" prefHeight="25.0" prefWidth="244.0" promptText="Produit/Service" />
+      <TextField fx:id="tch" layoutX="345.0" layoutY="46.0" onTextChange="#cherche" prefHeight="25.0" prefWidth="244.0" promptText="Produit/Service" />
    </children>
 </fx:root>

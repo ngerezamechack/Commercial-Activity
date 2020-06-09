@@ -43,13 +43,13 @@ public class PeriodePane extends AnchorPane{
     
     //constructeur pardefaut
     public PeriodePane(ComboBox<Periode> tper) {
-        FXMLLoader load = new FXMLLoader(getClass().getResource("/org/fieldnt/vente/vues/periode.fxml"));
+        FXMLLoader load = new FXMLLoader(getClass().getResource("/vente/vues/periode.fxml"));
         load.setRoot(this);
         load.setController(this);
         
         try{
             load.load();
-            getStylesheets().add(getClass().getResource("/org/fieldnt/vente/styles/styles.css").toExternalForm());
+            getStylesheets().add(getClass().getResource("/vente/styles/styles.css").toExternalForm());
             initList();
             tper.setItems(dper.list());
             

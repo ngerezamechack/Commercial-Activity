@@ -34,7 +34,7 @@ public class Statistiques extends BorderPane{
     
     
     public Statistiques() {
-        FXMLLoader load = new FXMLLoader(getClass().getResource("/org/fieldnt/vente/vues/stats/statistiques.fxml"));
+        FXMLLoader load = new FXMLLoader(getClass().getResource("/vente/vues/stats/statistiques.fxml"));
         load.setRoot(this);
         load.setController(this);
         

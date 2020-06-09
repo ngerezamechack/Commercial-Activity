@@ -8,7 +8,7 @@ package vente.donnees;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import vente.beans.Boite;
-import org.fieldnt.vente.beans.Etablissement;
+import vente.beans.Etablissement;
 
 /**
  *

@@ -31,6 +31,7 @@ public class Boite {
 
     private static Alert alert;
     private static TextArea text;
+    private static String css = Boite.class.getResource("/vente/styles/styles.css").toExternalForm();
 
     private static Service ser;
     private static Progress pg = new Progress();
@@ -62,7 +63,7 @@ public class Boite {
         
         alert.getDialogPane().
             getStylesheets()
-                .add(Boite.class.getResource("/org/fieldnt/vente/styles/styles.css").toExternalForm());
+                .add(css);
         
         text = new TextArea();
         text.setEditable(false);
@@ -82,7 +83,7 @@ public class Boite {
         alert = new Alert(type);
         alert.getDialogPane().
             getStylesheets()
-                .add(Boite.class.getResource("/org/fieldnt/vente/styles/styles.css").toExternalForm());
+                .add(css);
         
         alert.setTitle(title);
         alert.setHeaderText(null);
@@ -98,7 +99,7 @@ public class Boite {
         alert = new Alert(Alert.AlertType.CONFIRMATION, qst, ButtonType.YES, ButtonType.NO);
         alert.getDialogPane().
             getStylesheets()
-                .add(Boite.class.getResource("/org/fieldnt/vente/styles/styles.css").toExternalForm());
+                .add(css);
         
         alert.setTitle(title);
         alert.setHeaderText(null);
